@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>留言</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>留言</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="articles.html">文章</a></li>
+                    <li><a href="gallery.html">图片/视频</a></li>
+                    <li><a href="contact.html">留言</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h2>留言</h2>
+            <form class="contact-form" id="contact-form" onsubmit="submitForm(event)">
+                <label for="name">姓名:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="message">留言:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">提交</button>
+            </form>
+            <div id="success-message" style="display: none;">
+                <p>留言成功！</p>
+            </div>
+        </section>
+        <section>
+            <h2>留言列表</h2>
+            <div id="message-list">
+                <!-- 留言内容会动态添加到这里 -->
+            </div>
+        </section>
+        <footer>
+            <p>友情链接：</p>
+            <a href="https://www.pexels.com/zh-cn/videos/">友站1</a>
+            <a href="http://example.com">友站2</a>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

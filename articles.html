@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>文章列表</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>文章列表</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="articles.html">文章</a></li>
+                    <li><a href="gallery.html">图片/视频</a></li>
+                    <li><a href="contact.html">留言</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <form id="search-form">
+                <label for="search-query">通过时间或标题搜索:</label>
+                <input type="text" id="search-query" name="search-query" placeholder="输入标题或日期" oninput="showSuggestions(this.value, 'article')">
+                <div id="suggestions" class="suggestions"></div>
+                <button type="button" onclick="searchArticles()">搜索</button>
+            </form>
+            <div id="article-list">
+                <div class="article-cover" data-date="2024-05-20" data-title="python自动化有多神奇？">
+                    <p><span>1.</span> <strong class="article-title">python自动化有多神奇？</strong></p>
+                    <a href="https://www.zhihu.com/question/447051874/answer/3508098309" target="_blank">
+                        <img src="images/文章1封面.png" alt="文章1封面">
+                    </a>
+                    <p>2024.5.20</p>
+                </div>
+                <div class="article-cover" data-date="2024-05-25" data-title="我与数模">
+                    <p><span>2.</span> <strong class="article-title">我与数模</strong></p>
+                    <a href="https://zhuanlan.zhihu.com/p/681992309" target="_blank">
+                        <img src="images/文章2封面.png" alt="文章2封面">
+                    </a>
+                    <p>2024-05-25</p>
+                </div>
+            </div>
+            <div id="search-results" style="display: none;">
+                <h3>搜索结果:</h3>
+                <div id="search-results-list"></div>
+                <p id="no-results" style="display: none;">没有找到符合条件的文章。</p>
+            </div>
+        </section>
+        <footer>
+            <p>友情链接：</p>
+            <a href="https://www.pexels.com/zh-cn/videos/">友站1</a>
+            <a href="http://example.com">友站2</a>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

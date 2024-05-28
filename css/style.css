@@ -1,0 +1,365 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/背景图片.jpg'); /* 设置背景图片路径 */
+    background-size: cover; /* 使背景图片覆盖整个页面 */
+    background-repeat: no-repeat; /* 防止背景图片重复 */
+    background-attachment: fixed; /* 背景图片固定在视口 */
+    color: white; /* 设置字体颜色为白色，以便在深色背景上清晰可见 */
+    display: flex; /* 使用flexbox布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: flex-start; /* 垂直顶部对齐 */
+    height: 100vh; /* 设置高度为视口高度 */
+    overflow: auto; /* 允许内容溢出时滚动 */
+    font-size: 16px; /* 设置全局字体大小 */
+    line-height: 1.6; /* 设置全局行高 */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9); /* 调整透明度，使背景更柔和 */
+    padding: 30px;
+    border-radius: 15px; /* 圆角边框 */
+    color: black; /* 设置字体颜色为黑色 */
+    max-width: 1200px; /* 设置最大宽度 */
+    width: 90%; /* 设置宽度为视口的90% */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
+    margin: 20px auto; /* 使容器上下居中 */
+    overflow: hidden; /* 防止内容溢出容器 */
+    position: relative; /* 添加定位属性 */
+}
+
+.ad-container {
+    position: fixed;
+    top: 20px; /* 与顶部对齐 */
+    width: 180px; /* 扩大宽度 */
+    height: 600px; /* 扩大高度 */
+    z-index: 10; /* 确保广告在最上层 */
+    background: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+    border-radius: 10px; /* 圆角边框 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
+    text-align: center;
+    padding-top: 20px; /* 上内边距 */
+    padding-bottom: 10px; /* 下内边距 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ad-left {
+    left: 20px; /* 左侧广告定位 */
+}
+
+.ad-right {
+    right: 20px; /* 右侧广告定位 */
+}
+
+.ad-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ad-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.ad-close:hover {
+    background: darkred;
+}
+
+.ad-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* 圆角图片 */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* 添加半透明背景颜色，以确保文本可读 */
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px; /* 圆角边框 */
+    margin-bottom: 20px; /* 添加底部间距 */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.cover {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cover img {
+    width: auto; /* 确保宽度自动调整 */
+    height: 400px; /* 调整封面图片高度 */
+    display: block;
+    margin: 0 auto;
+    object-fit: cover; /* 确保图片覆盖整个高度 */
+    border-radius: 10px; /* 圆角图片 */
+}
+
+section {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95); /* 添加背景颜色，使文字更易读 */
+    border-radius: 10px; /* 圆角边框 */
+    margin-bottom: 20px; /* 添加底部间距 */
+}
+
+.profile-container {
+    border: 2px solid #ccc; /* 添加边框 */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+    border-radius: 10px; /* 圆角边框 */
+    margin-bottom: 20px; /* 添加底部间距 */
+}
+
+.profile {
+    display: flex;
+    flex-wrap: wrap; /* 确保图片和文字在小屏幕上也能良好显示 */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.photos {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* 居中对齐照片 */
+    gap: 10px;
+}
+
+.photos img {
+    max-width: 45%; /* 调整图片大小 */
+    height: auto;
+    border-radius: 10px; /* 圆角图片 */
+}
+
+.introduction {
+    flex: 2;
+    padding-left: 20px;
+    font-size: 18px; /* 增大文字大小 */
+}
+
+.hobbies-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.hobbies-list {
+    flex: 1;
+    padding-right: 10px; /* 调整这里的间距 */
+}
+
+.hobbies-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px; /* 调整这里的间距 */
+}
+
+.hobbies-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* 圆角图片 */
+}
+
+.article-cover {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9); /* 添加背景颜色，使文字更易读 */
+    border-radius: 10px; /* 圆角边框 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.article-cover img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* 圆角图片 */
+}
+
+.article-cover p {
+    margin: 0 0 5px;
+}
+
+.article-cover span {
+    font-size: 24px; /* 序号和标题的字体大小 */
+    color: black; /* 序号和标题的颜色 */
+    vertical-align: middle;
+}
+
+.article-title {
+    font-size: 20px;
+    color: black;
+    display: inline;
+    font-weight: bold;
+}
+
+.media-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.media-item {
+    flex: 0 0 48%; /* 每个媒体项占48%的宽度，确保两个项可以并排显示 */
+    margin-bottom: 20px; /* 添加底部间距 */
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9); /* 添加背景颜色，使文字更易读 */
+    border-radius: 10px; /* 圆角边框 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.media-item img, .media-item video {
+    width: 100%; /* 确保图片和视频的宽度适应容器 */
+    height: auto;
+    border-radius: 10px; /* 圆角图片 */
+}
+
+.media-title {
+    font-size: 20px;
+    color: black;
+    display: inline;
+    font-weight: bold;
+}
+
+.media-caption {
+    font-size: 18px;
+    color: black;
+}
+
+.media-date {
+    font-size: 14px;
+    color: #666;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.5); /* 添加半透明背景颜色 */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px; /* 圆角边框 */
+    margin-top: 20px; /* 添加顶部间距 */
+}
+
+#search-form, #search-form-media {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#search-form label, #search-form-media label {
+    color: black; /* 设置搜索提示文字为黑色 */
+}
+
+#search-form input, #search-form-media input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+#search-form button, #search-form-media button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#search-results, #search-results-media {
+    display: none;
+}
+
+#search-results h3, #search-results-media h3 {
+    margin-top: 0;
+}
+
+#no-results, #no-results-media {
+    color: red;
+}
+
+.suggestions {
+    position: absolute;
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    width: calc(100% - 22px);
+    z-index: 1000; /* 确保提示框在最上层 */
+    max-width: 300px; /* 调整提示框宽度 */
+}
+
+.suggestion-item {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #eee;
+}
+
+.search-hint {
+    font-size: 14px;
+    color: black;
+    margin-top: 5px;
+}
+
+/* 新增留言界面样式 */
+.contact-form label {
+    color: black; /* 将留言表单的标签颜色设置为黑色 */
+}
+
+.contact-form textarea, .contact-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+.message-item {
+    background: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+    padding: 10px;
+    border-radius: 10px; /* 圆角边框 */
+    margin-bottom: 10px; /* 添加底部间距 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+

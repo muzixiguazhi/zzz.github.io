@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>图片/视频列表</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>图片/视频列表</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="articles.html">文章</a></li>
+                    <li><a href="gallery.html">图片/视频</a></li>
+                    <li><a href="contact.html">留言</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <form id="search-form-media">
+                <label for="search-query-media">通过时间或标题搜索:</label>
+                <input type="text" id="search-query-media" name="search-query-media" placeholder="输入标题或日期" oninput="showSuggestions(this.value, 'media')">
+                <div id="suggestions-media" class="suggestions"></div>
+                <button type="button" onclick="searchMedia()">搜索</button>
+            </form>
+            <div id="media-list">
+                <h2>最新图片</h2>
+                <div id="media-list-images" class="media-row">
+                    <div class="media-item" data-date="2024-02-12" data-title="小猫们">
+                        <p><span>1.</span> <strong class="media-title">小猫们</strong></p>
+                        <img src="images/小猫们.jpg" alt="小猫们">
+                        <p class="media-caption">这是我们的小猫咪和她的崽，真的好可爱！<br><span class="media-date">2024-02-12</span></p>
+                    </div>
+                    <div class="media-item" data-date="2024-05-02" data-title="游玩宁波">
+                        <p><span>2.</span> <strong class="media-title">游玩宁波</strong></p>
+                        <img src="images/宁波大学.jpg" alt="宁波大学">
+                        <p class="media-caption">第一次去宁波大学！<br><span class="media-date">2024-05-02</span></p>
+                    </div>
+                </div>
+                <h2>最新视频</h2>
+                <div id="media-list-videos" class="media-row">
+                    <div class="media-item" data-date="2024-02-16" data-title="牛">
+                        <p><span>3.</span> <strong class="media-title">牛</strong></p>
+                        <a href="https://www.pexels.com/zh-cn/video/15921892/" target="_blank">
+                            <img src="images/牛.png" alt="牛">
+                        </a>
+                        <p class="media-caption">2024-02-16</p>
+                    </div>
+                    <div class="media-item" data-date="2024-05-12" data-title="食物">
+                        <p><span>4.</span> <strong class="media-title">食物</strong></p>
+                        <a href="https://www.pexels.com/zh-cn/video/6060027/" target="_blank">
+                            <img src="images/食物.png" alt="食物">
+                        </a>
+                        <p class="media-caption">2024-05-12</p>
+                    </div>
+                </div>
+            </div>
+            <div id="search-results-media" style="display: none;">
+                <h3>搜索结果:</h3>
+                <div id="search-results-list-media"></div>
+                <p id="no-results-media" style="display: none;">没有找到符合条件的图片/视频。</p>
+            </div>
+        </section>
+        <footer>
+            <p>友情链接：</p>
+            <a href="https://www.pexels.com/zh-cn/videos/">友站1</a>
+            <a href="http://example.com">友站2</a>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
