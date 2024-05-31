@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>文章标题1</title>
     <link rel="stylesheet" href="css/style.css">
+	<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header>
@@ -17,17 +18,36 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <h2>2024-05-20</h2>
-        <article>
-            <p>这是文章的详细内容。这里可以包含段落、图片、链接等各种HTML元素，用于展示文章的详细信息。</p>
-        </article>
-    </section>
-    <footer>
+    <section style="margin-top: 155px;color: #000;width: 80%;">
+		<div></div>
+        <form id="search-form" style="margin-top: 0%;">
+            <label for="search-query">通过时间或标题搜索:</label>
+            <input type="text" id="search-query" name="search-query" placeholder="输入标题或日期" oninput="showSuggestions(this.value, 'article')">
+            <div id="suggestions" class="suggestions"></div>
+            <button type="button" onclick="searchArticles()">搜索</button>
+         </form>
+		<div class="max-w-3xl mx-auto p-4" >
+		  <div class="prose dark:prose-dark" >
+		    <h1  class="text-3xl font-bold mb-4">智能传感器</h1>
+		    <p style="text-indent: 2em;">智能传感器学习报告学习智能传感器、模糊传感器、微传感器和网络传感器是了解和探索传感器领域最新技术和发展趋势的重要途径。
+			在学习这些新型传感器的过程中，我总结了一些心得和理解：1.智能传感器：智能传感器是指具有自主感知、智能决策和自适应学习能力的传感器设备。通过学习智能传感器，我深刻认识到智能传感器不仅可以
+			实现高精度的数据采集和处理，还可以实现数据的智能分析和处理，为智能化系统和应用提供关键支持。2.模糊传感器：模糊传感器是采用模糊逻辑原理设计的传感器，可以处理含糊、模糊的信息。在学习模糊
+			传感器时，我体会到其在处理不确定性和复杂性问题上的优势，可以更好地适应复杂环境下的应用需求。3.微传感器：微传感器是一种微型化、高集成化的传感器，可以实现对微小物体或微观环境的监测和检测。
+			学习微传感器让我了解到微传感器的制造工艺、工作原理和应用领域，以及在医疗、环境监测等领域的广泛应用。4.网络传感器：网络传感器是通过网络连接和通信技术实现传感器之间互联和数据共享的传感器系统。
+			学习网络传感器让我深入了解传感器网络的组网结构、通信协议和数据处理方法，了解传感器网络对智能化系统和物联网的重要性。结合相关文献和实践经验，我认识到学习新型传感器需要全面了解其原理、特点和应
+			用，通过多种途径获取知识和经验，不断提升自己在传感器领域的技术能力和应用水平，把握行业发展方向，实现个人和团队的持续创新和发展。</p>
+		  </div>
+		  <div class="mt-4 text-zinc-600 dark:text-zinc-400 text-sm">
+		    <time datetime="2023-10-01">2024年05月20日</time>
+		  </div>
+		</div>
+		 <footer>
         <p>友情链接：</p>
         <a href="http://example.com">友站1</a>
         <a href="http://example.com">友站2</a>
     </footer>
+    </section>
+   
     <script src="js/script.js"></script>
 </body>
 </html>

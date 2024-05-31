@@ -2,57 +2,53 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>文章列表</title>
+    <title>文章标题1</title>
     <link rel="stylesheet" href="css/style.css">
+	<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>文章列表</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="articles.html">文章</a></li>
-                    <li><a href="gallery.html">图片/视频</a></li>
-                    <li><a href="contact.html">留言</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section>
-            <form id="search-form">
-                <label for="search-query">通过时间或标题搜索:</label>
-                <input type="text" id="search-query" name="search-query" placeholder="输入标题或日期" oninput="showSuggestions(this.value, 'article')">
-                <div id="suggestions" class="suggestions"></div>
-                <button type="button" onclick="searchArticles()">搜索</button>
-            </form>
-            <div id="article-list">
-                <div class="article-cover" data-date="2024-05-20" data-title="python自动化有多神奇？">
-                    <p><span>1.</span> <strong class="article-title">python自动化有多神奇？</strong></p>
-                    <a href="https://www.zhihu.com/question/447051874/answer/3508098309" target="_blank">
-                        <img src="images/文章1封面.png" alt="文章1封面">
-                    </a>
-                    <p>2024.5.20</p>
-                </div>
-                <div class="article-cover" data-date="2024-05-25" data-title="我与数模">
-                    <p><span>2.</span> <strong class="article-title">我与数模</strong></p>
-                    <a href="https://zhuanlan.zhihu.com/p/681992309" target="_blank">
-                        <img src="images/文章2封面.png" alt="文章2封面">
-                    </a>
-                    <p>2024-05-25</p>
-                </div>
-            </div>
-            <div id="search-results" style="display: none;">
-                <h3>搜索结果:</h3>
-                <div id="search-results-list"></div>
-                <p id="no-results" style="display: none;">没有找到符合条件的文章。</p>
-            </div>
-        </section>
-        <footer>
-            <p>友情链接：</p>
-            <a href="https://www.pexels.com/zh-cn/videos/">友站1</a>
-            <a href="http://example.com">友站2</a>
-        </footer>
-    </div>
+    <header>
+        <h1>文章标题1</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="articles.html">文章</a></li>
+                <li><a href="gallery.html">图片/视频</a></li>
+                <li><a href="contact.html">留言</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section style="margin-top: 155px;color: #000;width: 80%;">
+        <form id="search-form" style="margin-top: 0%;">
+            <label for="search-query">通过时间或标题搜索:</label>
+            <input type="text" id="search-query" name="search-query" placeholder="输入标题或日期" oninput="showSuggestions(this.value, 'article')">
+            <div id="suggestions" class="suggestions"></div>
+            <button type="button" onclick="searchArticles()">搜索</button>
+         </form>
+		<div class="max-w-3xl mx-auto p-4" >
+		  <div class="prose dark:prose-dark" >
+		    <h1  class="text-3xl font-bold mb-4">光纤传感器</h1>
+		    <p style="text-indent: 2em;">光纤传感器学习报告光纤传感器作为一种新型的传感技术，正在逐渐改变着我们周围的生活和工作环境。
+			光纤传感器利用光信号来检测并传输各种参数，如温度、压力、应变等，具有高精度、高灵敏度、免受电磁干扰等优点，因此在工业、医疗、环
+			境监测等领域得到了广泛应用。我对光纤传感器的思考和体会主要包括以下几个方面：首先，光纤传感器的高精度和高灵敏度给人留下了深刻印象。
+			传统的传感器往往存在精度不高、易受干扰等问题，而光纤传感器凭借其独特的工作原理，能够实现对微小变化的精准监测，为各种行业提供了更加
+			可靠的数据支持。其次，光纤传感器的应用范围广泛，具有很大的发展潜力。随着科技的不断进步，人们对传感器的需求也在不断增加，光纤传感器
+			的应用领域将会进一步扩展和深化，为各行各业带来更多的创新应用。另外，光纤传感器的非接触式特点使得其在一些特殊环境下具有优势。例如，
+			在高温、高压、高污染等环境中，传统的传感器可能难以胜任工作，而光纤传感器能够通过光信号的传输来实现对目标参数的监测，无需直接接触
+			目标物体，极大地提高了传感器的稳定性和可靠性。总的来说，光纤传感器作为一种新兴的传感技术，具有许多优势和发展潜力，将为未来的科技
+			发展和人类生活带来更多的可能性和机遇。我们可以期待在未来的生活中，光纤传感器将会发挥更大的作用，为人类创造更美好的生活环境和工作条件。</p>
+		  </div>
+		  <div class="mt-4 text-zinc-600 dark:text-zinc-400 text-sm">
+		    <time datetime="2023-10-01">2024年05月15日</time>
+		  </div>
+		</div>
+		 <footer>
+        <p>友情链接：</p>
+        <a href="http://example.com">友站1</a>
+        <a href="http://example.com">友站2</a>
+    </footer>
+    </section>
+   
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -88,6 +88,9 @@ header {
     text-align: center;
     border-radius: 10px; /* 圆角边框 */
     margin-bottom: 20px; /* 添加底部间距 */
+	width: 81.5%;
+	position: fixed;
+	top: 7%;
 }
 
 nav ul {
@@ -113,6 +116,7 @@ nav ul li a:hover {
 .cover {
     text-align: center;
     margin-bottom: 20px;
+	margin-top: 195px;
 }
 
 .cover img {
@@ -273,6 +277,7 @@ section {
 #search-form, #search-form-media {
     margin-bottom: 20px;
     position: relative;
+	margin-top: 195px;
 }
 
 #search-form label, #search-form-media label {
